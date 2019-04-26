@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RI WEB</title>
+<style type="text/css">
+body{margin: 0;padding: 0}
+.container{width:80%;background-color:#cccccc;margin: auto;overflow: hidden;}
+.container4{width:80%;background-color:#cccccc;margin: auto;}
+.container3{width:80%;background-color:#e7e189;margin: auto;overflow: hidden;}
+ 
+.top_right{float: right;margin: 80px 50px 0;}
+input[type="text"]{height: 40px;width:250px;border-radius:8px;}
+input[type="button"]{height: 40px;border-radius:8px;background-color:#2eb135;outline:none;border:none;color:white;cursor: pointer;}
+input[type="button"]:hover{background-color: #299e2f}
+img.logo{padding: 0 10px;float: left;}
+h1{font-size: 50px;margin-top: 75px;color:#001ca8;font-family: Georgia,Helvetica;}
+
+nav#nav-main{padding: 0px 0;margin: 0;background: #00316b;}
+nav#nav-main ul{list-style-type: none;margin: 0;padding: 0;text-align: center;background-color:background: #00316b;}
+nav#nav-main li{display: inline;border-right: solid 1px #cc0028;padding: 0 0px;margin-right: -5px;}
+nav#nav-main li:last-child{border-right: none;}
+nav#nav-main li a{display: inline-block;color: white;background-image:-moz-linear-gradient(top,#41abdb 10%,#48b9ec 100%);
+            background-image:-webkit-linear-gradient(top,#41abdb 10%,#48b9ec 100%);
+            box-shadow: inset 4px -4px 10px rgb(59,155,199);width:150px;
+            height: 50px;line-height: 50px;
+            color: yellow;text-transform: uppercase;
+            text-decoration: none;
+            font-size: 22px;font-family: "Lucida calligraphy"}
+nav#nav-main a:hover{background:#2784af;;color: #fff;}
+
+#nav-trigger{
+  display: none;text-align: right;
+}
+#nav-trigger i.menu{
+  display: inline-block;padding: 10px 30px;background-color:#00316b;
+  color: white;cursor: pointer;text-transform: uppercase;font-size: 30px
+}
+#nav-trigger i.menu:hover{background-color: #e6002d;}
+
+nav#nav-mobile{position: relative;display: none;}
+nav#nav-mobile ul{display: none;list-style-type: none;position: absolute;
+left: 0;right: 0;margin-left:0;margin-right: 0; text-align: center;
+background-color:#48b9ec;padding: 0;z-index: 100}
+nav#nav-mobile li{display: block;padding: 0px 0px;margin: 0 0px;border-bottom: solid 1px #41abdb;width: 100%}
+nav#nav-mobile li:last-child{border-bottom: none;}
+nav#nav-mobile a{display: block;color: white;text-decoration: none;font-size: 22px;font-family: "Lucida calligraphy";height: 50px;line-height: 50px;text-transform: uppercase;}
+nav#nav-mobile  a :hover{background-color: #e6002d;color: #fff;}
+
+/*ul.nav{background-color: black;list-style-type: none;padding:0;margin: 0;text-align: center;width: 100%;overflow: hidden;}
+ul.nav li{display: inline;}
+ul.nav li a{display: inline-block;text-decoration: none;height: 50px;width:170px;line-height: 50px;text-align: center;color: white;font-size: 30px;font-family: "Lucida calligraphy";}
+ul.nav li a:hover{background-color:#ff7000;}*/
+
+.myslides{display: none;}
+.slideshow-container{max-width: 80%;position: relative;margin: auto;height:300px;margin:0 auto;}
+.text{color:#f2f2f2;font-size: 15px;padding: 8px 0px;position: absolute;
+bottom: 28px;width: 100%;text-align: center;}
+.numbertext{color: #f2f2f2;font-size: 12px;padding: 8px 12px;position:absolute;
+top: 0;}
+.dot{height: 13px;width: 13px;margin: 2px;background-color: #bbb;
+border-radius: 50%;display: inline-block;transition:background-color .6s ease;}
+.ass{position: absolute;bottom: 10px;width: 100%;}
+.active{background-color: #717171;}
+.fade{-webkit-animation-name:fade;-webkit-animation-duration:1.5s;
+animation-name:fade;animation-duration:1.5s;}
+@-webkit-keyframes fade{
+  from{opacity: .4;}
+  to{opacity: 1}
+}
+@keyframes fade{
+  from{opacity: .4;}
+  to{opacity: 1}
+}
+
+.ass5{width: 75%;margin: 50px auto;overflow: hidden;}
+.bd1{float: left;width: 31%;box-sizing:border-box;text-align: center;padding:20px 10px;margin: 0 1%;}
+.bd1:not(:last-child){border-right:3px solid green;}
+.bd1 p{margin-top: 50px;text-align: left;font-family:Verdana,Times;}
+.logo2{width:150px;height:150px;}
+.logo2:hover{transform:scale(1.5,1.5);}
+.container2{width: 80%;text-align: center;margin: auto;height: 60px;background-color:#00a8e1;}
+.container2 p{margin-top: 0;line-height: 60px;font-size: 30px;color: white;margin-bottom: 0;}
+/*ul.nav li.icon{display: none;}*/
+
+@media screen and (min-width: 1037px) and (max-width: 1138px){
+  h1{font-size: 40px;margin-top: 80px;}
+  img.logo{padding: 0 10px;}
+
+}
+@media screen and (max-width:1036px) and (min-width:769px){
+ 
+.top_right{float: right;margin: 85px 20px 0;}
+input[type="text"]{height: 30px;border-radius:5px;}
+input[type="button"]{height: 30px;border-radius:5px;}
+img.logo{padding: 0 10px;}
+h1{font-size: 30px;margin-top: 85px;color:#001ca8;}
+
+  
+ .container4{background-color:#cccccc;margin: auto;overflow: auto;}
+  .container,.container2,.container3,.container4{width: 100%;}
+  .slideshow-container{max-width: 100%;}
+}
+@media screen and (max-width:768px){
+
+  #nav-trigger{display: block;width:100%;background-color:#00316b }
+  nav#nav-main{display: none;}
+  nav#nav-mobile{display: block;width: 100%}
+  nav#nav-mobile ul{margin: 0px 0;padding: 0;width: 100%}
+  /*nav#nav-mobile ul.open{margin: 10px 0;padding: 0;}*/
+    nav#nav-mobile  a :hover{background-color: #e6002d;color: #fff;}
+  /*ul.nav li{display: none;}
+    ul.nav li.icon {
+    float: right;
+    display: block;
+  }*/
+
+.top_right{float: right;margin:22px 0 0 0;}
+input[type="text"]{height: 30px;width:100px;border-radius:5px;}
+input[type="button"]{height: 30px;border-radius:5px;}
+img.logo{padding: 0 10px;height: 75px;width: 75px;}
+h1{font-size: 30px;margin-top: 22px;color:#001ca8;margin-bottom: 0;}
+
+   /*ul.nav li a:hover{background-color:#8550a6;color:#00ae42;}
+  .nav.responsive {position: relative;text-align: left;}
+  .nav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 170px;
+  }
+  .nav.responsive li{
+     float: none;
+    display: block;
+    
+  }
+  .nav.responsive li a{ width: 100%;text-align: left; background-color:#b596ea;
+           border:1px solid #83389b;}
+  .nav.responsive li.icon a{text-align: center;background-color:#ff7000;}*/
+.ass5{width: 100%;}
+.bd1{float:none;width: 100%;box-sizing:border-box;text-align: center;padding:50px 10px;margin: 0;}
+.bd1{border:3px solid green;}
+.bd1 p{margin-top: 50px;}
+.container,.container3,.container2,.container4{width: 100%;}
+.slideshow-container{max-width: 100%;}
+}  
+</style>
+
+<link rel="stylesheet" type="text/css" href="css/all.min.css">
+<script type="text/javascript" src="jquery/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+ <img class="logo" src="image/cityscape.png" width="200" height="200">
+ 
+ <div class="top_right">
+	<input type="text" name="ass" placeholder="type here">
+	<input type="button" name="ass2" value="search">
+ </div>	
+<h1>RI WEB</h1>
+</div> 
+<div class="container4">
+	<nav id="nav-main">
+  <ul >
+    <li><a href="#">home</a></li>
+    <li><a href="#">about</a></li>
+    <li><a href="#">gallery</a></li>
+    <li><a href="#">tutorials</a></li>
+    <li><a href="#">contact</a></li>
+  </ul>
+  </nav>  
+  <div id="nav-trigger"><i class="fas fa-bars menu"></i></div>
+  <nav id="nav-mobile"> 
+
+  </nav>
+
+</div>
+
+
+	    <div class="slideshow-container">
+
+<div class="mySlides fade">
+<div class="numbertext">1/5</div>
+<img src="image/iceland_black_sand_beach.jpg" style="width:100%;height:300px">
+<div class="text">Caption one</div>
+</div>
+
+
+<div class="mySlides fade">
+<div class="numbertext">2/5</div>
+<img src="image/red_tree.jpg" style="width:100%;height:300px">
+<div class="text">Caption two</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">3/5</div>
+<img src="image/sunlight_stormy_clouds.jpg" style="width:100%;height:300px">
+<div class="text">Caption three</div>
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">4/5</div>
+<img src="image/tree_82.jpg" style="width:100%;height:300px">
+<div class="text">Caption four</div> 
+</div>
+
+<div class="mySlides fade">
+<div class="numbertext">5/5</div>
+<img src="image/beautiful_poppies.jpg" style="width:100%;height:300px">
+<div class="text">Caption five</div>
+</div>
+
+<div style="text-align:center" class="ass">
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+</div>
+<div class="container3">
+ <div class="ass5"> 
+  <div class="bd1">
+    <img class="logo2" src="image/vimeo.png">
+      <p>Mr. Phileas Fogg lived, in 1872, at No. 7, Saville Row, Burlington
+Gardens, the house in which Sheridan died in 1814.  He was one of the
+most noticeable members of the Reform Club, though he seemed always to
+avoid attracting attention; an enigmatical personage, about whom little
+was known, except that he was a polished man of the world.  People said
+that he resembled Byron--at least that his head was Byronic; but he was
+a bearded, tranquil Byron, who might live on a thousand years without
+growing old.</p>
+  </div>
+  <div class="bd1">
+    <img class="logo2" src="image/linkedin.png">
+     <p>Mr. Phileas Fogg lived, in 1872, at No. 7, Saville Row, Burlington
+Gardens, the house in which Sheridan died in 1814.  He was one of the
+most noticeable members of the Reform Club, though he seemed always to
+avoid attracting attention; an enigmatical personage, about whom little
+was known, except that he was a polished man of the world.  People said
+that he resembled Byron--at least that his head was Byronic; but he was
+a bearded, tranquil Byron, who might live on a thousand years without
+growing old.</p>
+  </div> 
+  <div class="bd1">
+    <img class="logo2" src="image/twitter.png">
+    <p>Mr. Phileas Fogg lived, in 1872, at No. 7, Saville Row, Burlington
+Gardens, the house in which Sheridan died in 1814.  He was one of the
+most noticeable members of the Reform Club, though he seemed always to
+avoid attracting attention; an enigmatical personage, about whom little
+was known, except that he was a polished man of the world.  People said
+that he resembled Byron--at least that his head was Byronic; but he was
+a bearded, tranquil Byron, who might live on a thousand years without
+growing old.</p>
+
+  </div>
+</div>
+</div>  <!-- end of class ass5-->
+<div class="container2">
+  <p>All right reserved by Rezwan Islam</p>
+</div>
+
+<script type="text/javascript">
+
+var slideIndex=0;
+showSlides();
+function showSlides(){
+  var i;
+  var slides=document.getElementsByClassName("mySlides");
+  var dots=document.getElementsByClassName("dot");
+  for(i=0;i<slides.length;i++){
+    slides[i].style.display="none";
+  }
+  slideIndex++;
+  if(slideIndex>slides.length){slideIndex=1}
+  for (i=0;i<dots.length;i++){
+    dots[i].className=dots[i].className.replace(" active","");
+  }
+  slides[slideIndex-1].style.display="block";
+  dots[slideIndex-1].className +=" active";
+  setTimeout(showSlides,4000);
+}
+
+
+$(document).ready(function(){
+  $("#nav-mobile").html($("#nav-main").html());
+  $("#nav-trigger i.menu").click(function(){
+    if($("nav#nav-mobile ul").hasClass("expanded")){
+      $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+      //$(this).removeClass("open");
+    }else{
+      $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+      //$(this).addClass("open");
+    }
+  })
+})
+</script>
+</body>
+</html>
